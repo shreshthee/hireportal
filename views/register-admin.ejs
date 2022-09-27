@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Sign In</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-inverse">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle collapsed"
+            data-toggle="collapse"
+            data-target="#bs-example-navbar-collapse-1"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Welcome</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <!-- <li ><a href="Final_bootstrap.html">Landing Page</a></li> -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Register Admin</h1>
+        <h4>Enter your correct details to register</h4>
+      </div>
+      <form method="POST" action="/admin/register">
+        <div class="form-group">
+          <label for="exampleInputLastName">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="exampleInputLastName"
+            placeholder="Name"
+            name="name"
+          />
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Student Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            placeholder="Email"
+            name="email"
+          />
+        </div>
+        <div class="form-group">
+          <label for="exampleInputRollNumber">Roll Number</label>
+          <input
+            type="number"
+            class="form-control"
+            id="exampleInputRollNumber"
+            placeholder="Roll Number"
+            name="roll"
+          />
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="exampleInputPassword1"
+            placeholder="Password"
+            name="pass"
+          />
+        </div>
+        <div class="form-group">
+          <label for="exampleInputConfirmPassword">Confirm Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="exampleInputConfirmPassword"
+            placeholder="Confirm Password"
+            name="cpass"
+          />
+        </div>
+        <div class="form-group">
+          <label for="exampleInputConfirmPassword">Admin Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="exampleInputConfirmPassword"
+            placeholder="Confirm Password"
+            name="adminPassword"
+          />
+        </div>
+        <!-- <div class="form-group">
+    <label for="exampleInputFile">File input</label>
+    <input type="file" id="exampleInputFile">
+    <p class="help-block">Example block-level help text here.</p>
+  </div> -->
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" />By checking this box,you make sure that the
+            details provided are correct
+          </label>
+        </div>
+        <button type="register" class="btn btn-default">Register</button>
+      </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

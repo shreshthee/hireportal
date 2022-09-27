@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Admin | login</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <style>
+      .jumbotron {
+        background-image: linear-gradient(
+            67.5deg,
+            rgb(6, 6, 6) 0%,
+            rgb(6, 6, 6) 6%,
+            rgb(29, 29, 29) 6%,
+            rgb(29, 29, 29) 57%,
+            rgb(52, 52, 52) 57%,
+            rgb(52, 52, 52) 58%,
+            rgb(75, 75, 75) 58%,
+            rgb(75, 75, 75) 79%,
+            rgb(97, 97, 97) 79%,
+            rgb(97, 97, 97) 93%,
+            rgb(120, 120, 120) 93%,
+            rgb(120, 120, 120) 95%,
+            rgb(143, 143, 143) 95%,
+            rgb(143, 143, 143) 100%
+          ),
+          linear-gradient(
+            90deg,
+            rgb(6, 6, 6) 0%,
+            rgb(6, 6, 6) 6%,
+            rgb(29, 29, 29) 6%,
+            rgb(29, 29, 29) 57%,
+            rgb(52, 52, 52) 57%,
+            rgb(52, 52, 52) 58%,
+            rgb(75, 75, 75) 58%,
+            rgb(75, 75, 75) 79%,
+            rgb(97, 97, 97) 79%,
+            rgb(97, 97, 97) 93%,
+            rgb(120, 120, 120) 93%,
+            rgb(120, 120, 120) 95%,
+            rgb(143, 143, 143) 95%,
+            rgb(143, 143, 143) 100%
+          ),
+          linear-gradient(
+            135deg,
+            rgb(6, 6, 6) 0%,
+            rgb(6, 6, 6) 6%,
+            rgb(29, 29, 29) 6%,
+            rgb(29, 29, 29) 57%,
+            rgb(52, 52, 52) 57%,
+            rgb(52, 52, 52) 58%,
+            rgb(75, 75, 75) 58%,
+            rgb(75, 75, 75) 79%,
+            rgb(97, 97, 97) 79%,
+            rgb(97, 97, 97) 93%,
+            rgb(120, 120, 120) 93%,
+            rgb(120, 120, 120) 95%,
+            rgb(143, 143, 143) 95%,
+            rgb(143, 143, 143) 100%
+          ),
+          linear-gradient(
+            0deg,
+            rgb(6, 6, 6) 0%,
+            rgb(6, 6, 6) 6%,
+            rgb(29, 29, 29) 6%,
+            rgb(29, 29, 29) 57%,
+            rgb(52, 52, 52) 57%,
+            rgb(52, 52, 52) 58%,
+            rgb(75, 75, 75) 58%,
+            rgb(75, 75, 75) 79%,
+            rgb(97, 97, 97) 79%,
+            rgb(97, 97, 97) 93%,
+            rgb(120, 120, 120) 93%,
+            rgb(120, 120, 120) 95%,
+            rgb(143, 143, 143) 95%,
+            rgb(143, 143, 143) 100%
+          ),
+          linear-gradient(90deg, rgb(8, 8, 8), rgb(221, 221, 221));
+        background-blend-mode: overlay, overlay, overlay, overlay, normal;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Name</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/student/home"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/admin/login">admin</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="jumbotron">
+      <div class="container text-light">
+        <h1>Admin Login</h1>
+        <h4>Enter your login details</h4>
+      </div>
+    </div>
+    <div class="container">
+      <% if (locals.notLogged) { %>
+      <div class="alert alert-danger" role="alert">
+        you are not logged in login again
+      </div>
+      <% } %>
+      <% if (locals.checkpass) { %>
+      <div class="alert alert-danger" role="alert">
+        please check your roll and password again
+      </div>
+      <% } %>
+      <% if (locals.success) { %>
+      <div class="alert alert-success" role="alert">
+        your acc has been created plz login to continue
+      </div>
+      <% } %>
+      <form method="POST" action="/admin/login">
+        <div class="form-group">
+          <label for="roll">roll</label>
+          <input
+            name="roll"
+            type="number"
+            class="form-control"
+            id="roll"
+            placeholder="roll"
+          />
+        </div>
+        <div class="form-group">
+          <label for="pass">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="pass"
+            name="pass"
+            placeholder="Password"
+          />
+        </div>
+        <button type="submit" class="btn btn-success">Log In</button>
+      </form>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
